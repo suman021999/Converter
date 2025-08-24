@@ -1,6 +1,14 @@
 "use client"
-import { CiGrid41 } from "react-icons/ci";
 import React, { useState } from 'react'
+import { CiGrid41 } from "react-icons/ci";
+import { PiImageBold } from "react-icons/pi";
+import { LuRuler } from "react-icons/lu";
+import { FaTemperatureHigh } from "react-icons/fa";
+import { IoDocumentAttachOutline } from "react-icons/io5";
+import { FaScaleUnbalancedFlip } from "react-icons/fa6";
+import { MdAccessTime } from "react-icons/md";
+
+
 import Link from 'next/link'
 
 const Sidebar = () => {
@@ -9,6 +17,7 @@ const Sidebar = () => {
   return (
     <>
       <section className='h-screen w-72 flex flex-col bg-gray-300'>
+        
 
         <div className="flex items-center justify-center mt-4 mb-10">
           <CiGrid41 className="h-8 w-8" />
@@ -18,45 +27,51 @@ const Sidebar = () => {
         <div className="flex gap-4 flex-col">
 
           <button 
-            className={`cursor-pointer h-10  ${activePage === 'imageConverter' ? 'bg-white' : 'bg-transparent'}`}
+            className={`cursor-pointer h-10 flex justify-center  text-blue-500 items-center gap-2 ${activePage === 'imageConverter' ? 'bg-white' : 'bg-transparent'}`}
             onClick={() => setActivePage('imageConverter')}
           >
-            <Link href="/imageConverter">Image Converter</Link>
+            <PiImageBold className='w-8 h-8'/>
+            <Link href="/imageConverter" className='font-semibold'>Image</Link>
           </button>
 
           <button 
-            className={`cursor-pointer h-10 ${activePage === 'lengthConverter' ? 'bg-white' : 'bg-transparent'}`}
+            className={`cursor-pointer h-10 flex justify-center text-blue-500 items-center gap-2 ${activePage === 'lengthConverter' ? 'bg-white' : 'bg-transparent'}`}
             onClick={() => setActivePage('lengthConverter')}
           >
-            <Link href="/lengthConverter">Length Converter</Link>
+            <LuRuler className='w-8 h-8'/>
+            <Link href="/lengthConverter" className='font-semibold'>Length</Link>
           </button>
 
           <button 
-            className={`cursor-pointer h-10 ${activePage === 'tempratureConverter' ? 'bg-white' : 'bg-transparent'}`}
+            className={`cursor-pointer h-10 flex justify-center text-blue-500 items-center gap-2 ${activePage === 'tempratureConverter' ? 'bg-white' : 'bg-transparent'}`}
             onClick={() => setActivePage('tempratureConverter')}
           >
-            <Link href="/tempratureConverter">Temprature Converter</Link>
+            <FaTemperatureHigh className='w-8 h-8'/>
+            <Link href="/tempratureConverter" className='font-semibold'>Tempurature</Link>
           </button>
 
           <button 
-            className={`cursor-pointer h-10 ${activePage === 'documentConverter' ? 'bg-white' : 'bg-transparent'}`}
+            className={`cursor-pointer h-10 flex justify-center text-blue-500 items-center gap-2 ${activePage === 'documentConverter' ? 'bg-white' : 'bg-transparent'}`}
             onClick={() => setActivePage('documentConverter')}
           >
-            <Link href="/documentConverter">Document Converter</Link>
+            <IoDocumentAttachOutline className='w-8 h-8'/>
+            <Link href="/documentConverter" className='font-semibold'>Document</Link>
           </button>
 
           <button 
-            className={`cursor-pointer h-10 ${activePage === 'weightConverter' ? 'bg-white' : 'bg-transparent'}`}
+            className={`cursor-pointer h-10 flex justify-center text-blue-500 items-center gap-2 ${activePage === 'weightConverter' ? 'bg-white' : 'bg-transparent'}`}
             onClick={() => setActivePage('weightConverter')}
           >
-            <Link href="/weightConverter">Weight Converter</Link>
+            <FaScaleUnbalancedFlip className='w-8 h-8'/>
+            <Link href="/weightConverter" className='font-semibold'>Weight</Link>
           </button>
 
            <button 
-            className={`cursor-pointer h-10 ${activePage === 'timeConverter' ? 'bg-white' : 'bg-transparent'}`}
+            className={`cursor-pointer h-10 flex justify-center text-blue-500 items-center gap-2 ${activePage === 'timeConverter' ? 'bg-white' : 'bg-transparent'}`}
             onClick={() => setActivePage('timeConverter')}
           >
-            <Link href="/timeConverter">Time Converter</Link>
+            <MdAccessTime className='w-8 h-8'/>
+            <Link href="/timeConverter" className='font-semibold'>Time</Link>
           </button>
 
 

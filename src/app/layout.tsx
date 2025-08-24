@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Sidebar from "@/components/Sidebar/Sidebar"
+import { Geist, Geist_Mono,Arvo } from "next/font/google";
+import Sidebar from "@/components/Sidebar/Sidebar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const arvo = Arvo({
+  weight: ['400', '700'],
+  subsets: ["latin"],
+  variable: "--font-arvo",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} ${arvo.variable} antialiased flex  h-screen`}
       >
          <Sidebar/>
         {children}

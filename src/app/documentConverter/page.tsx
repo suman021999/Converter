@@ -1,4 +1,4 @@
-import DocumentConvertor from '@/components/Document converter/DocumentConvertor'
+import DocumentConvertor from '@/components/Document converter/DocumentConverter'
 import React from 'react'
 
 const page = () => {
