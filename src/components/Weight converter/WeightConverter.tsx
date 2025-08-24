@@ -1,14 +1,14 @@
 "use client"
 import React from 'react'
 
-const ImageConverter = () => {
+const WeightConverter = () => {
   return (
     <>
       <section className=' w-full'>
-        fkfjdfjgfd
+        WeightConverter
       </section>
     </>
   )
 }
 
-export default ImageConverter
+export default WeightConverter

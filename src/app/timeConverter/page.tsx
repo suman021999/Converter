@@ -1,10 +1,10 @@
-import ImageConverter from '@/components/Image converter/ImageConverter'
+import TimeConverter from '@/components/Time converter/TimeConverter'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-      <ImageConverter/>
+      <TimeConverter/>
     </>
   )
 }

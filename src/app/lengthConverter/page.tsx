@@ -1,10 +1,10 @@
-import ImageConverter from '@/components/Image converter/ImageConverter'
+import LengthConverter from '@/components/Length converter/LengthConverter'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-      <ImageConverter/>
+      <LengthConverter/>
     </>
   )
 }

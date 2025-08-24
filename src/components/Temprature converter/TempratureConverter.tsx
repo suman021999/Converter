@@ -1,14 +1,14 @@
 "use client"
 import React from 'react'
 
-const ImageConverter = () => {
+const TempratureConverter = () => {
   return (
     <>
       <section className=' w-full'>
-        fkfjdfjgfd
+        temprature
       </section>
     </>
   )
 }
 
-export default ImageConverter
+export default TempratureConverter

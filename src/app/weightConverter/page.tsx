@@ -1,10 +1,10 @@
-import ImageConverter from '@/components/Image converter/ImageConverter'
+import WeightConverter from '@/components/Weight converter/WeightConverter'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-      <ImageConverter/>
+      <WeightConverter/>
     </>
   )
 }
