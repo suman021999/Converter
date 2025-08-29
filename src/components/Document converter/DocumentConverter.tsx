@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 const DocumentConverter: React.FC = () => {
   const [file, setFile] = useState<File | null>(null);
-  const [fromFormat, setFromFormat] = useState<string>("PDF");
   const [toFormat, setToFormat] = useState<string>("PDF");
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,14 +32,14 @@ const DocumentConverter: React.FC = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 
-    alert(`Converted ${file.name} from ${fromFormat} to ${toFormat}`);
+    alert(`Converted ${file.name} to ${toFormat}`);
   };
 
   return (
     <div className="w-full p-6">
-      {/* Title */}
-      <h1 className="text-2xl font-semibold mb-2">Document Conversion</h1>
-      <p className="text-gray-500 mb-6">
+      {/* Heading */}
+      <h2 className="text-lg font-semibold">Document Conversion</h2>
+      <p className="text-sm text-gray-500 mb-6">
         Upload your document and select the desired output format.
       </p>
 
@@ -54,23 +53,9 @@ const DocumentConverter: React.FC = () => {
         />
       </div>
 
-      {/* From Format */}
-      <div className="mb-4">
-        <label className="block text-sm font-medium mb-2">From Format</label>
-        <select
-          value={fromFormat}
-          onChange={(e) => setFromFormat(e.target.value)}
-          className="w-full border border-gray-300 rounded-md px-3 py-2"
-        >
-          <option>PDF</option>
-          <option>DOCX</option>
-          <option>TXT</option>
-        </select>
-      </div>
-
       {/* To Format */}
       <div className="mb-6">
-        <label className="block text-sm font-medium mb-2">To Format</label>
+        <label className="block text-sm font-medium mb-2">Convert to</label>
         <select
           value={toFormat}
           onChange={(e) => setToFormat(e.target.value)}
@@ -94,6 +79,7 @@ const DocumentConverter: React.FC = () => {
 };
 
 export default DocumentConverter;
+
 
 
 
